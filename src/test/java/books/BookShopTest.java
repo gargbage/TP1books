@@ -104,4 +104,14 @@ public class BookShopTest {
         };
         assertEquals(42, bookShop.cost(booksBought));
     }
+    
+    @Test
+    public void testCost_4HPbooksWith3Unique() {
+        String[] booksBought = {booksAvailable.hp_Azkaban,
+            booksAvailable.hp_Fire,
+            booksAvailable.hp_Phoenix,
+            booksAvailable.hp_Azkaban
+        };
+        assertEquals(28.64, bookShop.cost(booksBought));
+    }
 }
